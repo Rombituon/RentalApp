@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    
+}
+
+<div class="text-center">
+
+    <h1 class="display-4">@ViewData["WelcomeMessage"]</h1>
+    <h1 class="display-4">@ViewBag.Message</h1>
+
+    <select name="drpBank">
+        @foreach (var bank in ViewBag.Banks)
+        {
+            <option>@bank.ToString().ToUpper()</option>
+        }
+    </select>
+
+
+    <ul>
+        @foreach (var renter in ViewBag.Renters)
+        {
+            <li>@renter.Name</li>
+        }
+       
+    </ul>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Nama Bank</th>
+            </tr>
+        </thead>
+       <tbody>
+           @foreach (var bank in ViewBag.Banks)
+            {
+                <tr>
+                    <td>@bank</td>
+                </tr>
+            }
+            
+       </tbody>
+    </table>
+</div>
