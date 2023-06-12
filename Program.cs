@@ -26,6 +26,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -39,7 +40,7 @@ app.MapControllers();
 
 app.MapControllerRoute(
     name:"default",
-    pattern:"{controller=Home}/{action=Index}/{id?}"
+    pattern:"{controller}/{action=Index}/{id?}"
 );
 
 

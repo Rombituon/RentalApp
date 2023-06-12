@@ -17,3 +17,10 @@ dotnet ef migrations add <NameYourMigration>
 dotnet ef database update
 
 ```
+
+## API Requirement
+add 2 packages
+```
+Microsoft.AspNetCore.OpenApi
+Swashbuckle.AspNetCore
+```
